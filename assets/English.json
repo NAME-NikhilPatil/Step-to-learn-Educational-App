@@ -1,0 +1,88 @@
+[
+    {
+        "1": "Write the word for the animal that says 'meow'.",
+        "2": "What letter comes after 'B'?",
+        "3": "Write the opposite of 'happy'.",
+        "4": "How many vowels are there in the word 'elephant'?",
+        "5": "Create a sentence using the word 'sun'.",
+        "6": "Identify the rhyming word for 'cake'.",
+        "7": "Write the plural form of 'book'.",
+        "8": "Which word starts with the letter 'P'?",
+        "9": "What is the color of the sky?",
+        "10": "Complete the sentence: 'I have ___ apples.'"
+    },
+  {
+      "1": {
+          "a": "cat",
+          "b": "cot",
+          "c": "cut",
+          "d": "bat"
+      },
+      "2": {
+          "a": "C",
+          "b": "D",
+          "c": "E",
+          "d": "F"
+      },
+      "3": {
+          "a": "sad",
+          "b": "angry",
+          "c": "slow",
+          "d": "big"
+      },
+      "4": {
+          "a": "2",
+          "b": "3",
+          "c": "4",
+          "d": "5"
+      },
+      "5": {
+          "a": "The sun is bright.",
+          "b": "I like to run.",
+          "c": "Apples are red.",
+          "d": "My cat is fast."
+      },
+      "6": {
+          "a": "bake",
+          "b": "make",
+          "c": "lake",
+          "d": "shake"
+      },
+      "7": {
+          "a": "books",
+          "b": "bookes",
+          "c": "booken",
+          "d": "bookies"
+      },
+      "8": {
+          "a": "apple",
+          "b": "banana",
+          "c": "pencil",
+          "d": "desk"
+      },
+      "9": {
+          "a": "blue",
+          "b": "green",
+          "c": "yellow",
+          "d": "red"
+      },
+      "10": {
+          "a": "some",
+          "b": "many",
+          "c": "few",
+          "d": "a lot of"
+      }
+  },
+  {
+      "1": "cat",
+      "2": "C",
+      "3": "sad",
+      "4": "3",
+      "5": "The sun is bright.",
+      "6": "bake",
+      "7": "books",
+      "8": "pencil",
+      "9": "blue",
+      "10": "some"
+  }
+]

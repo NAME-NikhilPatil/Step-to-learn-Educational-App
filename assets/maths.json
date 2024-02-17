@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What is the result of 2 + 3?",
+        "2": "How many sides does a square have?",
+        "3": "Count the fingers on one hand. How many are there?",
+        "4": "If you have 4 apples and eat 2, how many apples do you have left?",
+        "5": "What comes after 5 in the counting sequence?",
+        "6": "If you have 3 red balls and 2 blue balls, how many balls do you have in total?",
+        "7": "How many legs does a cat have?",
+        "8": "If you have 7 candies and give 3 to your friend, how many candies do you have now?",
+        "9": "What is the shape of a pizza?",
+        "10": "If you have 8 fingers, how many fingers do you have on both hands?"
+    },
+    {
+        "1": {
+            "a": "4",
+            "b": "5",
+            "c": "6",
+            "d": "7"
+        },
+        "2": {
+            "a": "2",
+            "b": "3",
+            "c": "4",
+            "d": "5"
+        },
+        "3": {
+            "a": "5",
+            "b": "8",
+            "c": "10",
+            "d": "20"
+        },
+        "4": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4"
+        },
+        "5": {
+            "a": "6",
+            "b": "7",
+            "c": "8",
+            "d": "9"
+        },
+        "6": {
+            "a": "4",
+            "b": "5",
+            "c": "6",
+            "d": "7"
+        },
+        "7": {
+            "a": "2",
+            "b": "4",
+            "c": "6",
+            "d": "8"
+        },
+        "8": {
+            "a": "4",
+            "b": "5",
+            "c": "6",
+            "d": "7"
+        },
+        "9": {
+            "a": "Square",
+            "b": "Triangle",
+            "c": "Circle",
+            "d": "Rectangle"
+        },
+        "10": {
+            "a": "7",
+            "b": "8",
+            "c": "10",
+            "d": "16"
+        }
+    },
+    {
+        "1": "5",
+        "2": "4",
+        "3": "5",
+        "4": "2",
+        "5": "6",
+        "6": "5",
+        "7": "4",
+        "8": "4",
+        "9": "Circle",
+        "10": "10"
+    }
+]

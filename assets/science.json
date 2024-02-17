@@ -1,0 +1,89 @@
+
+[
+    {
+        "1": "What color is the sun?",
+        "2": "How many legs does an insect have?",
+        "3": "What do plants need to grow?",
+        "4": "Which of these is a natural source of light?",
+        "5": "What season comes after winter?",
+        "6": "How do birds fly?",
+        "7": "Which animal sleeps during the day and is awake at night?",
+        "8": "What is the process of a seed turning into a plant called?",
+        "9": "What gives us light and heat on Earth?",
+        "10": "What is the name of the natural satellite that orbits the Earth?"
+    },
+    {
+        "1": {
+            "a": "Yellow",
+            "b": "Blue",
+            "c": "Red",
+            "d": "Green"
+        },
+        "2": {
+            "a": "4",
+            "b": "6",
+            "c": "8",
+            "d": "10"
+        },
+        "3": {
+            "a": "Sunlight",
+            "b": "Water",
+            "c": "Air",
+            "d": "Fire"
+        },
+        "4": {
+            "a": "Lamp",
+            "b": "Moon",
+            "c": "Sun",
+            "d": "Star"
+        },
+        "5": {
+            "a": "Spring",
+            "b": "Summer",
+            "c": "Fall",
+            "d": "Autumn"
+        },
+        "6": {
+            "a": "Running",
+            "b": "Swimming",
+            "c": "Flying",
+            "d": "Crawling"
+        },
+        "7": {
+            "a": "Owl",
+            "b": "Dog",
+            "c": "Cat",
+            "d": "Horse"
+        },
+        "8": {
+            "a": "Photosynthesis",
+            "b": "Germination",
+            "c": "Metamorphosis",
+            "d": "Digestion"
+        },
+        "9": {
+            "a": "Moon",
+            "b": "Stars",
+            "c": "Sun",
+            "d": "Clouds"
+        },
+        "10": {
+            "a": "Moon",
+            "b": "Mars",
+            "c": "Jupiter",
+            "d": "Saturn"
+        }
+    },
+    {
+        "1": "Yellow",
+        "2": "6",
+        "3": "Sunlight, Water, and Air",
+        "4": "Sun",
+        "5": "Spring",
+        "6": "Flying",
+        "7": "Owl",
+        "8": "Germination",
+        "9": "Sun",
+        "10": "Moon"
+    }
+]

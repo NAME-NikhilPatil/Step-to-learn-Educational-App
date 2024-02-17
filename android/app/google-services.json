@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "940901639729",
+    "project_id": "learn-with-ai-91b91",
+    "storage_bucket": "learn-with-ai-91b91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940901639729:android:3cc567c4e9b9a36293d710",
+        "android_client_info": {
+          "package_name": "com.example.learn_with_ai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-8JWwkMML8E4H_XWnyE3jeQlRe98BoH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
