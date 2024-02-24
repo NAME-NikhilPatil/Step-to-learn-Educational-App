@@ -1,7 +1,6 @@
 // Model classes for the chat app
 
 // conversations include multiple messages
-import 'package:flutter/foundation.dart';
 
 class Conversation {
   final List<Message> messages;

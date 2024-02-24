@@ -2,7 +2,6 @@ import 'package:educational_app/Screens/Login/LoginScreen.dart';
 import 'package:educational_app/components/step_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -61,7 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       curve: Curves.easeIn);
                 }
               },
-              child: Container(
+              child: SizedBox(
                 width: size.width * 0.12,
                 height: size.height * 0.075,
 

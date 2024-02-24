@@ -5,6 +5,8 @@ import 'package:flutter_localization/flutter_localization.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Quiz extends StatefulWidget {
+  const Quiz({super.key});
+
   @override
   _QuizState createState() => _QuizState();
 }

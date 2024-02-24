@@ -32,22 +32,22 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           selected == 1
-              ? MainScreen()
+              ? const MainScreen()
               : selected == 2
                   ? const ProfilePage()
                   : selected == 3
-                      ? MaterialsPage()
+                      ? const MaterialsPage()
                       : selected == 4
                           ? const EventPage()
                           : selected == 5
-                              ? Quiz()
+                              ? const Quiz()
                               : selected == 6
-                                  ? StudyCenter()
+                                  ? const StudyCenter()
                                   : selected == 7
-                                      ? MentorPage()
+                                      ? const MentorPage()
                                       : selected == 8
                                           ? const HelpSection()
-                                          : MainScreen(),
+                                          : const MainScreen(),
         ],
       ),
     );

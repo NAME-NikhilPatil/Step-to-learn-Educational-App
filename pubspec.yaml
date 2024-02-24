@@ -60,6 +60,7 @@ dependencies:
   rflutter_alert: ^2.0.7
 
 
+  path: any
 dependency_overrides:
       modal_bottom_sheet: ^3.0.0-pre
 

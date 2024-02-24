@@ -52,17 +52,8 @@ class getjson extends StatelessWidget {
       builder: (context, snapshot) {
         List mydata = json.decode(snapshot.data.toString());
         print(mydata);
-        if (mydata == null) {
-          return Scaffold(
-            body: Center(
-                child: CircularProgressIndicator(
-              backgroundColor: primaryGreen,
-            )),
-          );
-        } else {
-          return quizpage(mydata: mydata);
-        }
-      },
+        return quizpage(mydata: mydata);
+            },
     );
   }
 }
@@ -105,7 +96,7 @@ class _quizpageState extends State<quizpage> {
 
   genrandomarray() {
     var distinctIds = [];
-    var rand = new Random();
+    var rand = Random();
     for (int i = 0;;) {
       distinctIds.add(rand.nextInt(10) + 1);
       random_array = distinctIds.toSet().toList();

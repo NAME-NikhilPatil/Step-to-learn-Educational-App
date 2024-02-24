@@ -7,6 +7,8 @@ import 'package:flutter_localization/flutter_localization.dart';
 import 'material_viewer.dart';
 
 class MaterialsPage extends StatefulWidget {
+  const MaterialsPage({super.key});
+
   @override
   _QuizState createState() => _QuizState();
 }
@@ -87,8 +89,9 @@ class _QuizState extends State<MaterialsPage> {
                     .snapshots(),
                 builder: (BuildContext context,
                     AsyncSnapshot<QuerySnapshot> snapshot) {
-                  if (snapshot.hasError)
+                  if (snapshot.hasError) {
                     return Text('Error: ${snapshot.error}');
+                  }
                   switch (snapshot.connectionState) {
                     case ConnectionState.waiting:
                       return const Center(

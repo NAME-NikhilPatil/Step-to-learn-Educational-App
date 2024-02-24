@@ -1,10 +1,8 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:educational_app/Screens/HomePage/home_page.dart';
 import 'package:educational_app/Screens/Translation/localization/locals.dart';
 import 'package:educational_app/components/Configuration.dart';
-import 'package:educational_app/main_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart';
@@ -37,7 +35,7 @@ class _ProfilePageState extends State<ProfilePage> {
   final emailcontroller = TextEditingController();
 
   void getdata() async {
-    var firebaseUser = await FirebaseAuth.instance.currentUser!;
+    var firebaseUser = FirebaseAuth.instance.currentUser!;
     databaseReference
         .collection("User")
         .doc(firebaseUser.uid)
@@ -64,7 +62,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     Future uploadPic() async {
-      var firebaseUser = await FirebaseAuth.instance.currentUser!;
+      var firebaseUser = FirebaseAuth.instance.currentUser!;
       String filName = p.basename(_image!.path);
       var reference = FirebaseStorage.instance.ref().child(filName);
       var uploadTask = reference.putFile(_image!);
@@ -108,7 +106,7 @@ class _ProfilePageState extends State<ProfilePage> {
     }
 
     Future updatedata() async {
-      var firebaseUser = await FirebaseAuth.instance.currentUser!;
+      var firebaseUser = FirebaseAuth.instance.currentUser!;
       databaseReference.collection("User").doc(firebaseUser.uid).update({
         'category': categorycontroller.text != ""
             ? categorycontroller.text
@@ -122,7 +120,7 @@ class _ProfilePageState extends State<ProfilePage> {
       }).then((_) {
         setState(() {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text("Data Updated"),
+            content: const Text("Data Updated"),
             backgroundColor: primaryGreen,
           ));
         });

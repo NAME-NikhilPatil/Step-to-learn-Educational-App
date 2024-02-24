@@ -10,6 +10,8 @@ import 'package:flutter_localization/flutter_localization.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
   @override
   _MainPageState createState() => _MainPageState();
 }
@@ -29,7 +31,7 @@ class _MainPageState extends State<MainScreen> {
         ..rotateY(isDrawerOpen ? -0.5 : 0),
       duration: const Duration(milliseconds: 250),
       decoration: BoxDecoration(
-          color: const Color(0xFBFCFA),
+          color: const Color(0x00fbfcfa),
           borderRadius: BorderRadius.circular(isDrawerOpen ? 40 : 0.0)),
       child: WillPopScope(
         onWillPop: () => showExitPopup(context),

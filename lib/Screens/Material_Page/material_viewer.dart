@@ -3,7 +3,7 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class MaterialPDFViewer extends StatelessWidget {
   final String? materialLink;
-  MaterialPDFViewer({Key? key, this.materialLink}) : super(key: key);
+  const MaterialPDFViewer({Key? key, this.materialLink}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

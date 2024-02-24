@@ -24,13 +24,13 @@ class _resultpageState extends State<resultpage> {
   void initState() {
     if (marks < 20) {
       image = images[2];
-      message = "You Should Try Hard..\n" + "You Scored $marks";
+      message = "You Should Try Hard..\n" "You Scored $marks";
     } else if (marks < 35) {
       image = images[1];
-      message = "You Can Do Better..\n" + "You Scored $marks";
+      message = "You Can Do Better..\n" "You Scored $marks";
     } else {
       image = images[0];
-      message = "You Did Very Well..\n" + "You Scored $marks";
+      message = "You Did Very Well..\n" "You Scored $marks";
     }
     super.initState();
   }
@@ -94,7 +94,7 @@ class _resultpageState extends State<resultpage> {
                 OutlinedButton(
                   onPressed: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => HomePage(),
+                      builder: (context) => const HomePage(),
                     ));
                   },
                   child: const Text(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoList extends StatefulWidget {
-  VideoList({super.key, required this.videoID});
+  const VideoList({super.key, required this.videoID});
   final List<String> videoID; // Declare videoID as a final variable
 
   @override
@@ -34,7 +34,7 @@ class _VideoListState extends State<VideoList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Next Videos'),
+        title: const Text('Next Videos'),
       ),
       body: ListView.separated(
         itemBuilder: (context, index) {

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class StudyCenter extends StatefulWidget {
+  const StudyCenter({super.key});
+
   @override
   _StudyCenterState createState() => _StudyCenterState();
 }

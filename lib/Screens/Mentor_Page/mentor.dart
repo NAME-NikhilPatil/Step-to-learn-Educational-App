@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
 
 class MentorPage extends StatefulWidget {
+  const MentorPage({super.key});
+
   @override
   _MentorPageState createState() => _MentorPageState();
 }

@@ -33,13 +33,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
         isLoading = true;
       });
 
-      var user;
+      User? user;
       // await user.sendEmailVerification();
       var result = await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: emailcontroller.text, password: passwordcontroller.text);
       user = result.user;
 
-      await databaseReference.collection("User").doc(user.uid).set({
+      await databaseReference.collection("User").doc(user!.uid).set({
         'email': emailcontroller.text,
         'password': passwordcontroller.text,
         'username': usernamecontroller.text,
