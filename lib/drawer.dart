@@ -12,14 +12,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class DrawerScreen extends StatefulWidget {
   final Function? onTap;
-  DrawerScreen({super.key, this.onTap, this.username, this.email, this.image});
-  String? username, email, image;
+  const DrawerScreen(
+      {super.key, this.onTap, this.username, this.email, this.image});
+  final String? username, email, image;
   @override
   _DrawerScreenState createState() => _DrawerScreenState();
 }
 
 class _DrawerScreenState extends State<DrawerScreen> {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  // final FirebaseAuth _auth = FirebaseAuth.instance;
   final databaseReference = FirebaseFirestore.instance;
   String? username, email, image;
 

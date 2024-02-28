@@ -10,7 +10,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class Youtube_Player extends StatefulWidget {
   Youtube_Player({super.key, required this.videoID});
-  List<String> videoID;
+  final List<String> videoID;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
