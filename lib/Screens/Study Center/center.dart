@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StudyCenter extends StatefulWidget {
   const StudyCenter({super.key});
@@ -27,11 +28,11 @@ class _StudyCenterState extends State<StudyCenter> {
       child: Scaffold(
         body: Column(
           children: [
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 30.h,
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 20.w),
               child: Row(
                 children: [
                   isDrawerOpen
@@ -56,15 +57,15 @@ class _StudyCenterState extends State<StudyCenter> {
                               isDrawerOpen = true;
                             });
                           }),
-                  const Row(
+                  Row(
                     children: [
                       SizedBox(
-                        width: 50,
+                        width: 35.w,
                       ),
                       Text(
                         "School Nearest You:",
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 20.sp,
                         ),
                       ),
                     ],
@@ -72,6 +73,15 @@ class _StudyCenterState extends State<StudyCenter> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 200.h,
+            ),
+            const Center(
+              child: Text(
+                "We are working on this feature:)) Soon this will be available for everyone:))",
+                textAlign: TextAlign.center,
+              ),
+            )
           ],
         ),
       ),

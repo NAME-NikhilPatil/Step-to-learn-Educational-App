@@ -6,6 +6,7 @@ import 'package:educational_app/Screens/Quiz_Page/resultpage.dart';
 import 'package:educational_app/components/Configuration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class getjson extends StatelessWidget {
@@ -53,7 +54,7 @@ class getjson extends StatelessWidget {
         List mydata = json.decode(snapshot.data.toString());
         print(mydata);
         return quizpage(mydata: mydata);
-            },
+      },
     );
   }
 }
@@ -207,25 +208,25 @@ class _quizpageState extends State<quizpage> {
 
   Widget choicebutton(String k) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 10.0,
-        horizontal: 20.0,
+      padding: EdgeInsets.symmetric(
+        vertical: 10.0.h,
+        horizontal: 20.0.w,
       ),
       child: MaterialButton(
         onPressed: () => checkanswer(k),
         color: btncolor[k],
         splashColor: primaryGreen,
         highlightColor: primaryGreen,
-        minWidth: 200.0,
-        height: 45.0,
+        minWidth: 200.0.w,
+        height: 45.0.h,
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
         child: Text(
           mydata[1][i.toString()][k],
-          style: const TextStyle(
+          style: TextStyle(
             color: Colors.white,
             fontFamily: "Alike",
-            fontSize: 16.0,
+            fontSize: 16.0.sp,
           ),
           maxLines: 1,
         ),
@@ -270,8 +271,8 @@ class _quizpageState extends State<quizpage> {
                 alignment: Alignment.bottomLeft,
                 child: Text(
                   mydata[0][i.toString()],
-                  style: const TextStyle(
-                    fontSize: 16.0,
+                  style: TextStyle(
+                    fontSize: 16.0.sp,
                     fontFamily: "Quando",
                   ),
                 ),
@@ -296,8 +297,8 @@ class _quizpageState extends State<quizpage> {
                 child: Center(
                   child: Text(
                     "Timer- $showtimer",
-                    style: const TextStyle(
-                      fontSize: 35.0,
+                    style: TextStyle(
+                      fontSize: 35.0.sp,
                       fontWeight: FontWeight.w700,
                       fontFamily: 'Times New Roman',
                     ),

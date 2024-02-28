@@ -10,6 +10,7 @@ class FAQPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('FAQs'),
         backgroundColor: primaryGreen,
+        elevation: 0,
       ),
       body: ListView.builder(
           itemCount: DataSource.questionAnswers.length,

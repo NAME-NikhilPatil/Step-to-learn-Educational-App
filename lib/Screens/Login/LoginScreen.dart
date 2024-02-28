@@ -3,6 +3,7 @@ import 'package:educational_app/Screens/Signup/signup_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -107,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               children: <Widget>[
                 Container(
-                  padding: const EdgeInsets.only(top: 15, left: 30, right: 30),
+                  padding: EdgeInsets.only(top: 15.h, left: 30.w, right: 30.w),
                   width: double.infinity,
                   height: size.height * 0.45,
                   child: Image.asset("assets/images/login.png"),
@@ -116,28 +117,28 @@ class _LoginScreenState extends State<LoginScreen> {
                   alignment: Alignment.center,
                   width: double.infinity,
                   height: size.height * 0.05,
-                  margin: const EdgeInsets.only(top: 10),
-                  child: const Text(
+                  margin: EdgeInsets.only(top: 10.h),
+                  child: Text(
                     "Login",
                     style: TextStyle(
                       color: Colors.lightBlue,
-                      fontSize: 28,
+                      fontSize: 28.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(
-                    left: 30,
-                    right: 30,
-                    top: 20,
-                    bottom: 10,
+                  margin: EdgeInsets.only(
+                    left: 30.w,
+                    right: 30.w,
+                    top: 20.h,
+                    bottom: 10.h,
                   ),
-                  padding: const EdgeInsets.only(left: 20),
+                  padding: EdgeInsets.only(left: 20.w),
                   decoration: BoxDecoration(
                     color: Colors.lightBlue.shade50,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20.r),
                     ),
                   ),
                   child: TextField(
@@ -154,17 +155,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(
-                    left: 30,
-                    right: 30,
-                    top: 10,
-                    bottom: 10,
+                  margin: EdgeInsets.only(
+                    left: 30.w,
+                    right: 30.w,
+                    top: 10.h,
+                    bottom: 10.h,
                   ),
-                  padding: const EdgeInsets.only(left: 20),
+                  padding: EdgeInsets.only(left: 20.w),
                   decoration: BoxDecoration(
                     color: Colors.lightBlue.shade50,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20.r),
                     ),
                   ),
                   child: TextField(
@@ -183,12 +184,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 10, bottom: 10),
+                  margin: EdgeInsets.only(top: 10.h, bottom: 10.h),
                   width: size.width * 0.85,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Colors.lightBlue,
                     borderRadius: BorderRadius.all(
-                      Radius.circular(20),
+                      Radius.circular(20.r),
                     ),
                   ),
                   child: TextButton(
@@ -199,19 +200,19 @@ class _LoginScreenState extends State<LoginScreen> {
                         ? const CircularProgressIndicator(
                             color: Colors.white,
                           )
-                        : const Text(
+                        : Text(
                             "LOGIN",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 20,
+                              fontSize: 20.sp,
                               letterSpacing: 2,
                             ),
                           ),
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: 20.h,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

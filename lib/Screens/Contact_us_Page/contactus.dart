@@ -4,6 +4,7 @@ import 'package:educational_app/Screens/Translation/localization/locals.dart';
 import 'package:educational_app/components/Configuration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 const String lat = "19.0212891";
@@ -37,11 +38,11 @@ class _HelpSectionState extends State<HelpSection> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 30.h,
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 20.w),
               child: Row(
                 children: [
                   isDrawerOpen
@@ -66,41 +67,45 @@ class _HelpSectionState extends State<HelpSection> {
                               isDrawerOpen = true;
                             });
                           }),
-                  const SizedBox(
-                    width: 50,
+                  SizedBox(
+                    width: 50.w,
                   ),
                   Column(
                     children: [
                       Text(
                         LocaleData.contactus.getString(context),
                         style: TextStyle(
-                            color: primaryGreen,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 32),
+                          color: primaryGreen,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 27.sp,
+                        ),
                       ),
                     ],
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 50.h,
             ),
             Center(
                 child: Image.asset(
               'assets/images/contactus2.png',
-              height: 250,
+              height: 210.h,
             )),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             Text(
               LocaleData.feedback.getString(context),
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20, color: Colors.grey[800]),
+              style: TextStyle(
+                fontSize: 20.sp,
+                color: Colors.grey[800],
+              ),
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -112,8 +117,8 @@ class _HelpSectionState extends State<HelpSection> {
                       _createEmail();
                     },
                     child: Container(
-                      height: 120,
-                      width: 150,
+                      height: 120.h,
+                      width: 130.w,
                       decoration:
                           BoxDecoration(color: Colors.white, boxShadow: [
                         BoxShadow(
@@ -150,8 +155,8 @@ class _HelpSectionState extends State<HelpSection> {
                       _makeCall();
                     },
                     child: Container(
-                      height: 120,
-                      width: 150,
+                      height: 120.h,
+                      width: 130.w,
                       decoration:
                           BoxDecoration(color: Colors.white, boxShadow: [
                         BoxShadow(
@@ -190,8 +195,8 @@ class _HelpSectionState extends State<HelpSection> {
                       );
                     },
                     child: Container(
-                      height: 120,
-                      width: 150,
+                      height: 120.h,
+                      width: 130.w,
                       decoration:
                           BoxDecoration(color: Colors.white, boxShadow: [
                         BoxShadow(
@@ -224,8 +229,8 @@ class _HelpSectionState extends State<HelpSection> {
                       _getlocation();
                     },
                     child: Container(
-                      height: 120,
-                      width: 150,
+                      height: 120.h,
+                      width: 130.w,
                       decoration:
                           BoxDecoration(color: Colors.white, boxShadow: [
                         BoxShadow(
@@ -254,8 +259,8 @@ class _HelpSectionState extends State<HelpSection> {
                 )
               ],
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.h,
             ),
             const Text('Copyright (c) 2023 learn with ai'),
             const Text('All rights reserved')

@@ -1,3 +1,4 @@
+import 'package:educational_app/api_key.dart';
 import 'package:flutter/material.dart';
 
 import 'models.dart';
@@ -5,7 +6,8 @@ import 'models.dart';
 class ConversationProvider extends ChangeNotifier {
   List<Conversation> _conversations = [];
   int _currentConversationIndex = 0;
-  String apikey = "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";
+  //Add here your API key
+  String apikey = ApiKey().apiKey;
   String proxy = "";
   List<Conversation> get conversations => _conversations;
   int get currentConversationIndex => _currentConversationIndex;

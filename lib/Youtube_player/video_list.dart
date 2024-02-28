@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoList extends StatefulWidget {
@@ -41,19 +42,19 @@ class _VideoListState extends State<VideoList> {
           return YoutubePlayer(
             key: ObjectKey(_controllers[index]),
             controller: _controllers[index],
-            actionsPadding: const EdgeInsets.only(left: 16.0),
+            actionsPadding: EdgeInsets.only(left: 16.0.w),
             bottomActions: [
               CurrentPosition(),
-              const SizedBox(width: 10.0),
+              SizedBox(width: 10.0.w),
               ProgressBar(isExpanded: true),
-              const SizedBox(width: 10.0),
+              SizedBox(width: 10.0.w),
               RemainingDuration(),
               FullScreenButton(),
             ],
           );
         },
         itemCount: _controllers.length,
-        separatorBuilder: (context, _) => const SizedBox(height: 10.0),
+        separatorBuilder: (context, _) => SizedBox(height: 10.0.h),
       ),
     );
   }

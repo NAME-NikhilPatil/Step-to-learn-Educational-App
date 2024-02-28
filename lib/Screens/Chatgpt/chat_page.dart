@@ -295,7 +295,7 @@ class _ChatPageState extends State<ChatPage> {
                                     .yourApiKey ==
                                 "YOUR_API_KEY"
                             ? () {
-                                showRenameDialog(context);
+                                // showRenameDialog(context);
                               }
                             : () {
                                 _sendMessageAndAddToChat();

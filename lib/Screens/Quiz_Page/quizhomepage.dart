@@ -2,6 +2,7 @@ import 'package:educational_app/Screens/Quiz_Page/quizpage.dart';
 import 'package:educational_app/Screens/Translation/localization/locals.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Quiz extends StatefulWidget {
@@ -34,9 +35,9 @@ class _QuizState extends State<Quiz> {
 
   Widget customcard(String langname, String image, String des) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 20.0,
-        horizontal: 30.0,
+      padding: EdgeInsets.symmetric(
+        vertical: 20.0.h,
+        horizontal: 30.0.w,
       ),
       child: InkWell(
         onTap: () {
@@ -51,53 +52,52 @@ class _QuizState extends State<Quiz> {
           color: Colors.lightBlue,
           elevation: 10.0,
           borderRadius: BorderRadius.circular(25.0),
-          child: Container(
-            child: Column(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 10.0,
-                  ),
-                  child: Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(100.0),
-                    child: SizedBox(
-                      // changing from 200 to 150 as to look better
-                      height: 150.0,
-                      width: 150.0,
-                      child: ClipOval(
-                        child: SvgPicture.asset(
-                          image,
-                        ),
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 12.0.h,
+                ),
+                child: Material(
+                  elevation: 5.0,
+                  borderRadius: BorderRadius.circular(100.0.r),
+                  child: SizedBox(
+                    // changing from 200 to 150 as to look better
+                    height: 150.0.h,
+                    width: 150.0.w,
+                    child: ClipOval(
+                      child: SvgPicture.asset(
+                        image,
                       ),
                     ),
                   ),
                 ),
-                Center(
-                  child: Text(
-                    langname,
-                    style: const TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                      fontFamily: "Quando",
-                      fontWeight: FontWeight.w700,
-                    ),
+              ),
+              Center(
+                child: Text(
+                  langname,
+                  style: TextStyle(
+                    fontSize: 20.0.sp,
+                    color: Colors.white,
+                    fontFamily: "Quando",
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Text(
-                    des,
-                    style: const TextStyle(
-                        fontSize: 18.0,
-                        color: Colors.white,
-                        fontFamily: "Alike"),
-                    maxLines: 5,
-                    textAlign: TextAlign.justify,
+              ),
+              Container(
+                padding: EdgeInsets.all(20.0),
+                child: Text(
+                  des,
+                  style: TextStyle(
+                    fontSize: 18.0.sp,
+                    color: Colors.white,
+                    fontFamily: "Alike",
                   ),
+                  maxLines: 5,
+                  textAlign: TextAlign.justify,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
@@ -117,11 +117,11 @@ class _QuizState extends State<Quiz> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 30.h,
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 20.w),
               child: Row(
                 children: [
                   isDrawerOpen
@@ -146,16 +146,16 @@ class _QuizState extends State<Quiz> {
                               isDrawerOpen = true;
                             });
                           }),
-                  const SizedBox(
-                    width: 100,
+                  SizedBox(
+                    width: 100.w,
                   ),
                 ],
               ),
             ),
             _container(
-              0.0,
-              30.0,
-              10.0,
+              0.0.w,
+              30.0.h,
+              10.0.w,
               Colors.lightBlue,
               LocaleData.quiz.getString(context),
               "assets/images/quiz.png",
@@ -177,25 +177,25 @@ class _QuizState extends State<Quiz> {
       onTap: () {},
       child: Container(
         margin: EdgeInsets.only(left: left, right: right, top: top),
-        height: 200,
+        height: 180.h,
         width: (MediaQuery.of(context).size.width - 50),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: color),
+            borderRadius: BorderRadius.circular(20.r), color: color),
         child: Column(
           children: <Widget>[
             Container(
-              height: 150,
+              height: 132.h,
               width: (MediaQuery.of(context).size.width - 50),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                   image: DecorationImage(
                       image: AssetImage(image), fit: BoxFit.cover)),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             Text(
               text,
-              style: const TextStyle(
-                  fontSize: 24,
+              style: TextStyle(
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             )

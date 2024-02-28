@@ -7,6 +7,7 @@ import 'package:educational_app/exit.dart';
 import 'package:educational_app/youtube_player/youtube_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MainScreen extends StatefulWidget {
@@ -40,11 +41,11 @@ class _MainPageState extends State<MainScreen> {
           body: SingleChildScrollView(
             child: Column(
               children: [
-                const SizedBox(
-                  height: 50,
+                SizedBox(
+                  height: 30.h,
                 ),
                 Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 20),
+                  margin: EdgeInsets.symmetric(horizontal: 20.w),
                   child: Row(
                     children: [
                       isDrawerOpen
@@ -69,23 +70,23 @@ class _MainPageState extends State<MainScreen> {
                                   isDrawerOpen = true;
                                 });
                               }),
-                      const SizedBox(
-                        width: 30,
+                      SizedBox(
+                        width: 21.w,
                       ),
                       Column(
                         children: [
                           Text(
                             LocaleData.title.getString(context),
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: Colors.lightBlue,
                               fontWeight: FontWeight.w500,
-                              fontSize: 24,
+                              fontSize: 21.sp,
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        width: 30,
+                      SizedBox(
+                        width: 21.w,
                       ),
                       IconButton(
                         onPressed: () {
@@ -97,12 +98,12 @@ class _MainPageState extends State<MainScreen> {
                         },
                         icon: Image.asset(
                           "resources/avatars/ChatGPT_logo.png",
-                          width: 35,
-                          height: 35,
+                          width: 30.w,
+                          height: 30.w,
                         ),
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 12.w,
                       ),
                       IconButton(
                         onPressed: () {
@@ -115,7 +116,7 @@ class _MainPageState extends State<MainScreen> {
                         },
                         icon: Icon(
                           Icons.g_translate,
-                          size: 30,
+                          size: 27,
                           color: Colors.black.withOpacity(0.5),
                         ),
                       ),
@@ -142,15 +143,15 @@ class _MainPageState extends State<MainScreen> {
                 //   ),
                 // ),
 
-                const SizedBox(
-                  height: 21,
+                SizedBox(
+                  height: 21.h,
                 ),
                 // Text(
                 //   LocaleData.title.getString(context),
                 // ),
 
                 SizedBox(
-                  height: 120,
+                  height: 100.h,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: categories.length,
@@ -180,21 +181,21 @@ class _MainPageState extends State<MainScreen> {
                             },
                             child: Container(
                               padding: const EdgeInsets.all(10),
-                              margin: const EdgeInsets.only(left: 20),
+                              margin: EdgeInsets.only(left: 20.w),
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   boxShadow: shadowList,
-                                  borderRadius: BorderRadius.circular(10)),
+                                  borderRadius: BorderRadius.circular(10.r)),
                               child: Column(
                                 children: [
                                   SvgPicture.asset(
                                     categories[index]["iconPath"],
-                                    height: 40,
-                                    width: 40,
+                                    height: 40.w,
+                                    width: 40.w,
                                     color: primaryGreen,
                                   ),
-                                  const SizedBox(
-                                    height: 3,
+                                  SizedBox(
+                                    height: 3.h,
                                   ),
                                   Text(
                                     index == 0
@@ -242,8 +243,8 @@ class _MainPageState extends State<MainScreen> {
                                 )));
                   },
                   child: Container(
-                    height: 240,
-                    margin: const EdgeInsets.symmetric(horizontal: 20),
+                    height: 210.h,
+                    margin: EdgeInsets.symmetric(horizontal: 20.w),
                     child: Row(
                       children: [
                         Expanded(
@@ -252,33 +253,33 @@ class _MainPageState extends State<MainScreen> {
                               Container(
                                 decoration: BoxDecoration(
                                     color: Colors.blueGrey[300],
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(20.r),
                                     boxShadow: shadowList,
                                     image: const DecorationImage(
                                         image:
                                             AssetImage('assets/images/1.jpeg'),
                                         fit: BoxFit.cover)),
-                                margin: const EdgeInsets.only(top: 50),
+                                margin: EdgeInsets.only(top: 50.h),
                               ),
                             ],
                           ),
                         ),
                         Expanded(
                             child: Container(
-                          height: 150,
-                          margin: const EdgeInsets.only(top: 60, bottom: 20),
-                          padding: const EdgeInsets.only(left: 10, right: 10),
+                          height: 150.h,
+                          margin: EdgeInsets.only(top: 60.h, bottom: 20.h),
+                          padding: EdgeInsets.only(left: 10.w, right: 10.w),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               boxShadow: shadowList,
-                              borderRadius: const BorderRadius.only(
-                                  topRight: Radius.circular(20),
-                                  bottomRight: Radius.circular(20))),
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(20.r),
+                                  bottomRight: Radius.circular(20.r))),
                           child: Center(
                               child: Text(
                             LocaleData.standard1.getString(context),
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 20.sp,
                               fontWeight: FontWeight.bold,
                               color: primaryGreen,
                             ),
@@ -305,8 +306,8 @@ class _MainPageState extends State<MainScreen> {
                                 )));
                   },
                   child: Container(
-                    height: 240,
-                    margin: const EdgeInsets.symmetric(horizontal: 20),
+                    height: 210.h,
+                    margin: EdgeInsets.symmetric(horizontal: 20.w),
                     child: Row(
                       children: [
                         Expanded(
@@ -315,34 +316,34 @@ class _MainPageState extends State<MainScreen> {
                               Container(
                                 decoration: BoxDecoration(
                                   color: Colors.orange[100],
-                                  borderRadius: BorderRadius.circular(20),
+                                  borderRadius: BorderRadius.circular(20.r),
                                   boxShadow: shadowList,
                                   image: const DecorationImage(
                                     image: AssetImage('assets/images/2.jpeg'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
-                                margin: const EdgeInsets.only(top: 50),
+                                margin: EdgeInsets.only(top: 50.h),
                               ),
                             ],
                           ),
                         ),
                         Expanded(
                             child: Container(
-                          height: 150,
-                          margin: const EdgeInsets.only(top: 60, bottom: 20),
-                          padding: const EdgeInsets.only(left: 10, right: 10),
+                          height: 150.h,
+                          margin: EdgeInsets.only(top: 60.h, bottom: 20.h),
+                          padding: EdgeInsets.only(left: 10.w, right: 10.w),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               boxShadow: shadowList,
-                              borderRadius: const BorderRadius.only(
-                                  topRight: Radius.circular(20),
-                                  bottomRight: Radius.circular(20))),
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(20.r),
+                                  bottomRight: Radius.circular(20.r))),
                           child: Center(
                               child: Text(
                             LocaleData.standard2.getString(context),
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 20.sp,
                               fontWeight: FontWeight.bold,
                               color: primaryGreen,
                             ),
@@ -369,8 +370,8 @@ class _MainPageState extends State<MainScreen> {
                                 )));
                   },
                   child: Container(
-                    height: 240,
-                    margin: const EdgeInsets.symmetric(horizontal: 20),
+                    height: 210.h,
+                    margin: EdgeInsets.symmetric(horizontal: 20.w),
                     child: Row(
                       children: [
                         Expanded(
@@ -379,34 +380,34 @@ class _MainPageState extends State<MainScreen> {
                               Container(
                                 decoration: BoxDecoration(
                                   color: Colors.orange[100],
-                                  borderRadius: BorderRadius.circular(20),
+                                  borderRadius: BorderRadius.circular(20.r),
                                   boxShadow: shadowList,
                                   image: const DecorationImage(
                                     image: AssetImage('assets/images/3.jpeg'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
-                                margin: const EdgeInsets.only(top: 50),
+                                margin: EdgeInsets.only(top: 50.h),
                               ),
                             ],
                           ),
                         ),
                         Expanded(
                             child: Container(
-                          height: 150,
-                          margin: const EdgeInsets.only(top: 60, bottom: 20),
-                          padding: const EdgeInsets.only(left: 10, right: 10),
+                          height: 150.h,
+                          margin: EdgeInsets.only(top: 60.h, bottom: 20.h),
+                          padding: EdgeInsets.only(left: 10.w, right: 10.w),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               boxShadow: shadowList,
-                              borderRadius: const BorderRadius.only(
-                                  topRight: Radius.circular(20),
-                                  bottomRight: Radius.circular(20))),
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(20.r),
+                                  bottomRight: Radius.circular(20.r))),
                           child: Center(
                               child: Text(
                             LocaleData.standard3.getString(context),
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 20.sp,
                               fontWeight: FontWeight.bold,
                               color: primaryGreen,
                             ),
@@ -433,8 +434,8 @@ class _MainPageState extends State<MainScreen> {
                                 )));
                   },
                   child: Container(
-                    height: 240,
-                    margin: const EdgeInsets.symmetric(horizontal: 20),
+                    height: 210.h,
+                    margin: EdgeInsets.symmetric(horizontal: 20.w),
                     child: Row(
                       children: [
                         Expanded(
@@ -443,34 +444,34 @@ class _MainPageState extends State<MainScreen> {
                               Container(
                                 decoration: BoxDecoration(
                                   color: Colors.orange[100],
-                                  borderRadius: BorderRadius.circular(20),
+                                  borderRadius: BorderRadius.circular(20.r),
                                   boxShadow: shadowList,
                                   image: const DecorationImage(
                                     image: AssetImage('assets/images/4.jpeg'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
-                                margin: const EdgeInsets.only(top: 50),
+                                margin: EdgeInsets.only(top: 50.h),
                               ),
                             ],
                           ),
                         ),
                         Expanded(
                             child: Container(
-                          height: 150,
-                          margin: const EdgeInsets.only(top: 60, bottom: 20),
-                          padding: const EdgeInsets.only(left: 10, right: 10),
+                          height: 150.h,
+                          margin: EdgeInsets.only(top: 60.h, bottom: 20.h),
+                          padding: EdgeInsets.only(left: 10.w, right: 10.w),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               boxShadow: shadowList,
-                              borderRadius: const BorderRadius.only(
-                                  topRight: Radius.circular(20),
-                                  bottomRight: Radius.circular(20))),
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(20.r),
+                                  bottomRight: Radius.circular(20.r))),
                           child: Center(
                               child: Text(
                             LocaleData.standard4.getString(context),
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 20.sp,
                               fontWeight: FontWeight.bold,
                               color: primaryGreen,
                             ),
@@ -480,8 +481,8 @@ class _MainPageState extends State<MainScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 50,
+                SizedBox(
+                  height: 50.h,
                 )
               ],
             ),
@@ -496,27 +497,28 @@ class _MainPageState extends State<MainScreen> {
       onTap: () {},
       child: Container(
         margin: EdgeInsets.only(left: left, right: right, top: top),
-        height: 200,
+        height: 180.h,
         width: (MediaQuery.of(context).size.width - 50),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: color),
+            borderRadius: BorderRadius.circular(20.r), color: color),
         child: Column(
           children: <Widget>[
             Container(
-              height: 150,
+              height: 132.h,
               width: (MediaQuery.of(context).size.width - 50),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                   image: DecorationImage(
                       image: AssetImage(image), fit: BoxFit.cover)),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             Text(
               text,
-              style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
+              style: TextStyle(
+                fontSize: 24.sp,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             )
           ],
         ),

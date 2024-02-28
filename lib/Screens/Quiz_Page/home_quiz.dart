@@ -3,6 +3,7 @@ import 'package:educational_app/Screens/Translation/localization/locals.dart';
 import 'package:educational_app/components/Configuration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Quiz_Home extends StatefulWidget {
@@ -35,16 +36,16 @@ class _Quiz_HomeState extends State<Quiz_Home> {
 
   List<String> des = [
     "Explore the world of numbers and shapes in 1st-grade math – a fun journey of learning and discovery awaits you! Test your math skills and watch your understanding grow!",
-    "Dive into the world of words and sentences in 1st-grade English – explore, learn, and challenge yourself with the wonders of language!",
+    "Dive into the world of words and sentences in 1st-grade English – explore, learn, and challenge yourself!",
     "Dive into the wonders of the natural world with 1st-grade science – explore, discover, and test your knowledge in a fun and exciting learning adventure!",
     "खोजो हिंदी की दुनिया को पहली कक्षा में - एक मजेदार और शिक्षात्मक सफर में, जानो और अपनी जानकारी का परीक्षण करो!",
   ];
 
   Widget customcard(String langname, String image, String des) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 20.0,
-        horizontal: 30.0,
+      padding: EdgeInsets.symmetric(
+        vertical: 20.0.h,
+        horizontal: 30.0.w,
       ),
       child: InkWell(
         onTap: () {
@@ -58,20 +59,20 @@ class _Quiz_HomeState extends State<Quiz_Home> {
         child: Material(
           color: primaryGreen,
           elevation: 10.0,
-          borderRadius: BorderRadius.circular(25.0),
+          borderRadius: BorderRadius.circular(25.0.r),
           child: Column(
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 10.0,
+                padding: EdgeInsets.symmetric(
+                  vertical: 10.0.h,
                 ),
                 child: Material(
                   elevation: 5.0,
-                  borderRadius: BorderRadius.circular(100.0),
+                  borderRadius: BorderRadius.circular(100.0.r),
                   child: SizedBox(
                     // changing from 200 to 150 as to look better
-                    height: 150.0,
-                    width: 150.0,
+                    height: 150.0.h,
+                    width: 150.0.w,
                     child: ClipOval(
                       child: SvgPicture.asset(
                         image,
@@ -83,8 +84,8 @@ class _Quiz_HomeState extends State<Quiz_Home> {
               Center(
                 child: Text(
                   langname,
-                  style: const TextStyle(
-                    fontSize: 20.0,
+                  style: TextStyle(
+                    fontSize: 20.0.sp,
                     color: Colors.white,
                     fontFamily: "Quando",
                     fontWeight: FontWeight.w700,
@@ -95,8 +96,10 @@ class _Quiz_HomeState extends State<Quiz_Home> {
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
                   des,
-                  style: const TextStyle(
-                      fontSize: 18.0, color: Colors.white, fontFamily: "Alike"),
+                  style: TextStyle(
+                      fontSize: 18.0.sp,
+                      color: Colors.white,
+                      fontFamily: "Alike"),
                   maxLines: 5,
                   textAlign: TextAlign.justify,
                 ),
@@ -124,9 +127,9 @@ class _Quiz_HomeState extends State<Quiz_Home> {
         child: Column(
           children: [
             _container(
-              0.0,
-              30.0,
-              10.0,
+              0.0.w,
+              30.0.h,
+              10.0.w,
               Colors.lightBlue,
               LocaleData.quiz.getString(context),
               "assets/images/quiz.png",
@@ -177,25 +180,25 @@ class _Quiz_HomeState extends State<Quiz_Home> {
       onTap: () {},
       child: Container(
         margin: EdgeInsets.only(left: left, right: right, top: top),
-        height: 200,
+        height: 180.h,
         width: (MediaQuery.of(context).size.width - 50),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: color),
+            borderRadius: BorderRadius.circular(20.r), color: color),
         child: Column(
           children: <Widget>[
             Container(
-              height: 150,
+              height: 132.h,
               width: (MediaQuery.of(context).size.width - 50),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                   image: DecorationImage(
                       image: AssetImage(image), fit: BoxFit.cover)),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             Text(
               text,
-              style: const TextStyle(
-                  fontSize: 24,
+              style: TextStyle(
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             )

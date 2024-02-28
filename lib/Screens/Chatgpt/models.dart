@@ -1,6 +1,5 @@
 // Model classes for the chat app
 
-// conversations include multiple messages
 
 class Conversation {
   final List<Message> messages;

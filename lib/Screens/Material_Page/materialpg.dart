@@ -3,6 +3,7 @@ import 'package:educational_app/Screens/Translation/localization/locals.dart';
 import 'package:educational_app/components/Configuration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'material_viewer.dart';
 
@@ -34,11 +35,11 @@ class _QuizState extends State<MaterialsPage> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 30.h,
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 20.w),
               child: Row(
                 children: [
                   isDrawerOpen
@@ -63,25 +64,25 @@ class _QuizState extends State<MaterialsPage> {
                               isDrawerOpen = true;
                             });
                           }),
-                  const SizedBox(
-                    width: 100,
+                  SizedBox(
+                    width: 100.w,
                   ),
                 ],
               ),
             ),
             _container(
                 0.0,
-                30.0,
-                10.0,
+                30.0.h,
+                10.0.w,
                 Colors.lightBlue,
                 LocaleData.materials.getString(context),
                 "assets/images/material.png"),
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 30.h,
             ),
             Container(
               padding: const EdgeInsets.all(10.0),
-              height: 700,
+              height: 700.h,
               width: double.infinity,
               child: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
@@ -102,18 +103,18 @@ class _QuizState extends State<MaterialsPage> {
                         children: snapshot.data!.docs
                             .map((DocumentSnapshot document) {
                           return Container(
-                            margin: const EdgeInsets.all(10.0),
+                            margin: EdgeInsets.all(10.0),
                             decoration: BoxDecoration(
                               color: primaryGreen,
-                              borderRadius: BorderRadius.circular(15),
+                              borderRadius: BorderRadius.circular(15.r),
                             ),
                             child: Center(
                               child: ListTile(
                                 title: Text(
                                   document['subject'],
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                                      fontSize: 20.sp,
                                       color: Colors.white),
                                 ),
                                 trailing: const Icon(
@@ -153,27 +154,28 @@ class _QuizState extends State<MaterialsPage> {
       },
       child: Container(
         margin: EdgeInsets.only(left: left, right: right, top: top),
-        height: 200,
+        height: 180.h,
         width: (MediaQuery.of(context).size.width - 50),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: color),
+            borderRadius: BorderRadius.circular(20.r), color: color),
         child: Column(
           children: <Widget>[
             Container(
-              height: 150,
+              height: 132.h,
               width: (MediaQuery.of(context).size.width - 50),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                   image: DecorationImage(
                       image: AssetImage(image), fit: BoxFit.cover)),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             Text(
               text,
-              style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
+              style: TextStyle(
+                fontSize: 24.sp,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             )
           ],
         ),

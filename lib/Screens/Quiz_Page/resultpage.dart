@@ -1,5 +1,6 @@
 import 'package:educational_app/Screens/HomePage/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class resultpage extends StatefulWidget {
@@ -51,38 +52,36 @@ class _resultpageState extends State<resultpage> {
             flex: 8,
             child: Material(
               elevation: 10.0,
-              child: Container(
-                child: Column(
-                  children: <Widget>[
-                    Material(
-                      child: SizedBox(
-                        width: 300.0,
-                        height: 300.0,
-                        child: ClipRect(
-                          child: Image(
-                            image: AssetImage(
-                              image!,
-                            ),
+              child: Column(
+                children: <Widget>[
+                  Material(
+                    child: SizedBox(
+                      width: 300.0.w,
+                      height: 300.0.h,
+                      child: ClipRect(
+                        child: Image(
+                          image: AssetImage(
+                            image!,
                           ),
                         ),
                       ),
                     ),
-                    Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 5.0,
-                          horizontal: 15.0,
-                        ),
-                        child: Center(
-                          child: Text(
-                            message!,
-                            style: const TextStyle(
-                              fontSize: 18.0,
-                              fontFamily: "Quando",
-                            ),
+                  ),
+                  Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 5.0.h,
+                        horizontal: 15.0.w,
+                      ),
+                      child: Center(
+                        child: Text(
+                          message!,
+                          style: TextStyle(
+                            fontSize: 18.0.sp,
+                            fontFamily: "Quando",
                           ),
-                        )),
-                  ],
-                ),
+                        ),
+                      )),
+                ],
               ),
             ),
           ),
@@ -97,10 +96,11 @@ class _resultpageState extends State<resultpage> {
                       builder: (context) => const HomePage(),
                     ));
                   },
-                  child: const Text(
+                  child: Text(
                     "Continue",
                     style: TextStyle(
-                      fontSize: 18.0,
+                      fontSize: 18.0.sp,
+                      color: Colors.lightBlue,
                     ),
                   ),
                 )

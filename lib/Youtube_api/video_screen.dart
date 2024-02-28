@@ -1,56 +1,56 @@
-import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+// import 'package:flutter/material.dart';
+// import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class VideoScreen extends StatefulWidget {
-  final String? id;
+// class VideoScreen extends StatefulWidget {
+//   final String? id;
 
-  const VideoScreen({super.key, this.id});
+//   const VideoScreen({super.key, this.id});
 
-  @override
-  _VideoScreenState createState() => _VideoScreenState();
-}
+//   @override
+//   _VideoScreenState createState() => _VideoScreenState();
+// }
 
-class _VideoScreenState extends State<VideoScreen> {
-  YoutubePlayerController? _controller;
+// class _VideoScreenState extends State<VideoScreen> {
+//   YoutubePlayerController? _controller;
 
-  @override
-  void initState() {
-    super.initState();
-    _controller = YoutubePlayerController(
-      initialVideoId: widget.id!,
-      flags: const YoutubePlayerFlags(
-        mute: false,
-        autoPlay: true,
-      ),
-    );
-    _controller!.toggleFullScreenMode();
-  }
+//   @override
+//   void initState() {
+//     super.initState();
+//     _controller = YoutubePlayerController(
+//       initialVideoId: widget.id!,
+//       flags: const YoutubePlayerFlags(
+//         mute: false,
+//         autoPlay: true,
+//       ),
+//     );
+//     _controller!.toggleFullScreenMode();
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        Navigator.pop(context);
-        return true;
-      },
-      child: Scaffold(
-        body: YoutubePlayerBuilder(
-          player: YoutubePlayer(
-            controller: _controller!,
-            showVideoProgressIndicator: true,
-            onReady: () {
-              print('Player is ready.');
-            },
-          ),
-          builder: (context, player) {
-            return Column(
-              children: [
-                player,
-              ],
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return WillPopScope(
+//       onWillPop: () async {
+//         Navigator.pop(context);
+//         return true;
+//       },
+//       child: Scaffold(
+//         body: YoutubePlayerBuilder(
+//           player: YoutubePlayer(
+//             controller: _controller!,
+//             showVideoProgressIndicator: true,
+//             onReady: () {
+//               print('Player is ready.');
+//             },
+//           ),
+//           builder: (context, player) {
+//             return Column(
+//               children: [
+//                 player,
+//               ],
+//             );
+//           },
+//         ),
+//       ),
+//     );
+//   }
+// }

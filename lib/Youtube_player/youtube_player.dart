@@ -5,6 +5,7 @@ import 'package:educational_app/youtube_player/video_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class Youtube_Player extends StatefulWidget {
@@ -94,13 +95,15 @@ class _MyHomePageState extends State<Youtube_Player> {
         showVideoProgressIndicator: true,
         progressIndicatorColor: Colors.blueAccent,
         topActions: <Widget>[
-          const SizedBox(width: 8.0),
+          SizedBox(
+            width: 8.0.w,
+          ),
           Expanded(
             child: Text(
               _controller.metadata.title,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.white,
-                fontSize: 18.0,
+                fontSize: 18.0.sp,
               ),
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
@@ -302,10 +305,10 @@ class _MyHomePageState extends State<Youtube_Player> {
         children: [
           TextSpan(
             text: value,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.w400,
-              fontSize: 18,
+              fontSize: 18.sp,
             ),
           ),
         ],
@@ -334,7 +337,7 @@ class _MyHomePageState extends State<Youtube_Player> {
     }
   }
 
-  Widget get _space => const SizedBox(height: 10);
+  Widget get _space => SizedBox(height: 10.h);
 
   Widget _loadCueButton(String action) {
     return Expanded(
@@ -379,9 +382,9 @@ class _MyHomePageState extends State<Youtube_Player> {
         content: Text(
           message,
           textAlign: TextAlign.center,
-          style: const TextStyle(
+          style: TextStyle(
             fontWeight: FontWeight.w300,
-            fontSize: 16.0,
+            fontSize: 16.0.sp,
           ),
         ),
         backgroundColor: Colors.blueAccent,

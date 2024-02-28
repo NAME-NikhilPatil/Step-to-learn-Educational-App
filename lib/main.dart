@@ -66,6 +66,7 @@ class _MyAppState extends State<MyApp> {
             supportedLocales: localization.supportedLocales,
             localizationsDelegates: localization.localizationsDelegates,
             home: widget.login ? const HomePage() : const SplashScreen(),
+
             // home: SignUpScreen(),
           );
         });

@@ -8,6 +8,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path/path.dart' as p;
@@ -138,11 +139,11 @@ class _ProfilePageState extends State<ProfilePage> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 30.h,
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 20.w),
               child: Row(
                 children: [
                   isDrawerOpen
@@ -167,8 +168,8 @@ class _ProfilePageState extends State<ProfilePage> {
                               isDrawerOpen = true;
                             });
                           }),
-                  const SizedBox(
-                    width: 50,
+                  SizedBox(
+                    width: 50.w,
                   ),
                 ],
               ),
@@ -180,25 +181,25 @@ class _ProfilePageState extends State<ProfilePage> {
                 Colors.lightBlue,
                 LocaleData.profile.getString(context),
                 "assets/images/profile.png"),
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 50.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                const SizedBox(
-                  width: 60,
+                SizedBox(
+                  width: 60.w,
                 ),
                 Align(
                   alignment: Alignment.center,
                   child: CircleAvatar(
-                    radius: 100,
+                    radius: 90.r,
                     backgroundColor: Colors.lightBlue,
                     child: ClipOval(
                       child: SizedBox(
-                        width: 180.0,
-                        height: 180.0,
+                        width: 165.0.w,
+                        height: 165.0.w,
                         child: (_image != null)
                             ? Image.file(
                                 _image!,
@@ -218,7 +219,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 60.0, right: 20),
+                  padding: EdgeInsets.only(top: 60.0.h, right: 20.w),
                   child: IconButton(
                     icon: const Icon(
                       FontAwesomeIcons.camera,
@@ -232,17 +233,17 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 40.0,
+            SizedBox(
+              height: 40.0.h,
             ),
             Container(
-              margin: const EdgeInsets.only(
-                  left: 30, right: 30, top: 20, bottom: 10),
-              padding: const EdgeInsets.only(left: 20),
-              decoration: const BoxDecoration(
-                  color: Color(0xFFDBF3FA),
+              margin: EdgeInsets.only(
+                  left: 30.w, right: 30.w, top: 20.h, bottom: 10.h),
+              padding: EdgeInsets.only(left: 20.w),
+              decoration: BoxDecoration(
+                  color: const Color(0xFFDBF3FA),
                   borderRadius: BorderRadius.all(
-                    Radius.circular(20),
+                    Radius.circular(20.r),
                   )),
               child: TextField(
                 onChanged: null,
@@ -262,13 +263,13 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(
-                  left: 30, right: 30, top: 20, bottom: 10),
-              padding: const EdgeInsets.only(left: 20),
-              decoration: const BoxDecoration(
-                  color: Color(0xFFDBF3FA),
+              margin: EdgeInsets.only(
+                  left: 30.w, right: 30.w, top: 20.h, bottom: 10.h),
+              padding: EdgeInsets.only(left: 20.w),
+              decoration: BoxDecoration(
+                  color: const Color(0xFFDBF3FA),
                   borderRadius: BorderRadius.all(
-                    Radius.circular(20),
+                    Radius.circular(20.r),
                   )),
               child: TextField(
                 onChanged: null,
@@ -288,13 +289,13 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(
-                  left: 30, right: 30, top: 20, bottom: 10),
-              padding: const EdgeInsets.only(left: 20),
-              decoration: const BoxDecoration(
-                  color: Color(0xFFDBF3FA),
+              margin: EdgeInsets.only(
+                  left: 30.w, right: 30.w, top: 20.h, bottom: 10.h),
+              padding: EdgeInsets.only(left: 20.w),
+              decoration: BoxDecoration(
+                  color: const Color(0xFFDBF3FA),
                   borderRadius: BorderRadius.all(
-                    Radius.circular(20),
+                    Radius.circular(20.r),
                   )),
               child: TextField(
                 onChanged: null,
@@ -314,13 +315,13 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(
-                  left: 30, right: 30, top: 20, bottom: 10),
-              padding: const EdgeInsets.only(left: 20),
-              decoration: const BoxDecoration(
-                  color: Color(0xFFDBF3FA),
+              margin: EdgeInsets.only(
+                  left: 30.w, right: 30.w, top: 20.h, bottom: 10.h),
+              padding: EdgeInsets.only(left: 20.w),
+              decoration: BoxDecoration(
+                  color: const Color(0xFFDBF3FA),
                   borderRadius: BorderRadius.all(
-                    Radius.circular(20),
+                    Radius.circular(20.r),
                   )),
               child: TextField(
                 onChanged: null,
@@ -339,8 +340,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 controller: emailcontroller,
               ),
             ),
-            const SizedBox(
-              height: 25,
+            SizedBox(
+              height: 25.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -364,20 +365,20 @@ class _ProfilePageState extends State<ProfilePage> {
                 //   ),
                 // ),
                 Container(
-                  margin: const EdgeInsets.only(top: 10, bottom: 10),
+                  margin: EdgeInsets.only(top: 10.h, bottom: 10.h),
                   width: MediaQuery.of(context).size.width * 0.25,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                       color: Colors.lightBlue,
                       borderRadius: BorderRadius.all(
-                        Radius.circular(5),
+                        Radius.circular(5.r),
                       )),
                   child: TextButton(
                     onPressed: () {
                       updatedata();
                     },
-                    child: const Text(
+                    child: Text(
                       'Submit',
-                      style: TextStyle(color: Colors.white, fontSize: 16.0),
+                      style: TextStyle(color: Colors.white, fontSize: 16.0.sp),
                     ),
                   ),
                 ),
@@ -398,25 +399,25 @@ class _ProfilePageState extends State<ProfilePage> {
       },
       child: Container(
         margin: EdgeInsets.only(left: left, right: right, top: top),
-        height: 200,
+        height: 180.h,
         width: (MediaQuery.of(context).size.width - 50),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: color),
+            borderRadius: BorderRadius.circular(20.r), color: color),
         child: Column(
           children: <Widget>[
             Container(
-              height: 150,
+              height: 132.h,
               width: (MediaQuery.of(context).size.width - 50),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                   image: DecorationImage(
                       image: AssetImage(image), fit: BoxFit.cover)),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             Text(
               text,
-              style: const TextStyle(
-                  fontSize: 24,
+              style: TextStyle(
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             )

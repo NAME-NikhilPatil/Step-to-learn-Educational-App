@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:educational_app/Screens/Translation/localization/locals.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class EventPage extends StatefulWidget {
@@ -40,11 +41,11 @@ class _EventPageState extends State<EventPage> {
           borderRadius: BorderRadius.circular(isDrawerOpen ? 40 : 0.0)),
       child: Column(
         children: [
-          const SizedBox(
-            height: 50,
+          SizedBox(
+            height: 30.h,
           ),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 20),
+            margin: EdgeInsets.symmetric(horizontal: 20.w),
             child: Row(
               children: [
                 isDrawerOpen
@@ -69,13 +70,13 @@ class _EventPageState extends State<EventPage> {
                             isDrawerOpen = true;
                           });
                         }),
-                const SizedBox(
-                  width: 50,
+                SizedBox(
+                  width: 50.w,
                 ),
               ],
             ),
           ),
-          _container(0.0, 30.0, 10.0, Colors.lightBlue,
+          _container(0.0.w, 30.0.h, 10.0.w, Colors.lightBlue,
               LocaleData.events.getString(context), "assets/images/event.png"),
           Expanded(
             child: Container(
@@ -105,7 +106,7 @@ class _EventPageState extends State<EventPage> {
                                 height: size.height * 0.2,
                                 decoration: BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderRadius: BorderRadius.circular(30.0.r),
                                     boxShadow: [
                                       BoxShadow(
                                           color: Colors.black.withOpacity(0.3),
@@ -145,9 +146,9 @@ class _EventPageState extends State<EventPage> {
                                                         .data()
                                                     as Map<String,
                                                         dynamic>)['title'],
-                                                style: const TextStyle(
+                                                style: TextStyle(
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 16,
+                                                  fontSize: 16.sp,
                                                 ),
                                                 maxLines: 2,
                                               ),
@@ -240,25 +241,29 @@ class _EventPageState extends State<EventPage> {
       },
       child: Container(
         margin: EdgeInsets.only(left: left, right: right, top: top),
-        height: 200,
+        height: 180.h,
         width: (MediaQuery.of(context).size.width - 50),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: color),
+          borderRadius: BorderRadius.circular(20.r),
+          color: color,
+        ),
         child: Column(
           children: <Widget>[
             Container(
-              height: 150,
+              height: 132.h,
               width: (MediaQuery.of(context).size.width - 50),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                   image: DecorationImage(
                       image: AssetImage(image), fit: BoxFit.cover)),
             ),
-            const SizedBox(height: 10),
+            SizedBox(
+              height: 10.h,
+            ),
             Text(
               text,
-              style: const TextStyle(
-                  fontSize: 24,
+              style: TextStyle(
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             )

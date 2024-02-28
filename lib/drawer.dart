@@ -6,6 +6,7 @@ import 'package:educational_app/Screens/Welcome/splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -68,19 +69,19 @@ class _DrawerScreenState extends State<DrawerScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.lightBlue,
-      padding: const EdgeInsets.only(top: 50, bottom: 70, left: 10),
+      padding: EdgeInsets.only(top: 50.h, bottom: 70.h, left: 10.w),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Row(
             children: <Widget>[
               CircleAvatar(
-                radius: 30,
+                radius: 30.r,
                 backgroundColor: const Color(0xFF62B9BF),
                 child: ClipOval(
-                  child: new SizedBox(
-                    width: 50.0,
-                    height: 50.0,
+                  child: SizedBox(
+                    width: 50.0.w,
+                    height: 50.0.h,
                     child: (image != null)
                         ? Image.network(
                             image!,
@@ -93,24 +94,25 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 10,
+              SizedBox(
+                width: 10.w,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     email != null ? email! : "hexhackathon30@gmail.com",
-                    style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16.sp,
+                    ),
                   ),
                   Text(
                     username != null ? username! : "Learn With AI",
-                    style: const TextStyle(
+                    style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.bold),
                   )
                 ],
@@ -132,15 +134,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         color: Colors.white,
                         size: 30,
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
                       Text(
                         LocaleData.courses.getString(context),
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                         ),
                       )
                     ],
@@ -160,15 +162,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         color: Colors.white,
                         size: 30,
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
                       Text(
                         LocaleData.profile.getString(context),
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                         ),
                       )
                     ],
@@ -188,15 +190,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         color: Colors.white,
                         size: 30,
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
                       Text(
                         LocaleData.materials.getString(context),
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                         ),
                       )
                     ],
@@ -216,15 +218,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         color: Colors.white,
                         size: 30,
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
                       Text(
                         LocaleData.events.getString(context),
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                         ),
                       )
                     ],
@@ -244,15 +246,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         color: Colors.white,
                         size: 30,
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
                       Text(
                         LocaleData.quiz.getString(context),
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                         ),
                       )
                     ],
@@ -265,15 +267,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   onTap: () {
                     widget.onTap!(6);
                   },
-                  child: const Row(
+                  child: Row(
                     children: <Widget>[
-                      Icon(
+                      const Icon(
                         Icons.school,
                         color: Colors.white,
                         size: 30,
                       ),
                       SizedBox(
-                        width: 10,
+                        width: 10.w,
                       ),
                       Text(
                         // LocaleData.quiz.getString(context),
@@ -281,7 +283,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                         ),
                       )
                     ],
@@ -301,15 +303,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         color: Colors.white,
                         size: 30,
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
                       Text(
                         LocaleData.mentors.getString(context),
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                         ),
                       )
                     ],
@@ -329,15 +331,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         color: Colors.white,
                         size: 30,
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
                       Text(
                         LocaleData.contact.getString(context),
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                         ),
                       )
                     ],
@@ -359,15 +361,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     color: Colors.white,
                     size: 30,
                   ),
-                  const SizedBox(
-                    width: 10,
+                  SizedBox(
+                    width: 10.w,
                   ),
                   Text(
                     LocaleData.logout.getString(context),
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 20.sp,
                     ),
                   )
                 ],

@@ -2,6 +2,7 @@ import 'package:educational_app/Screens/Translation/localization/locals.dart';
 import 'package:educational_app/components/Configuration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MentorPage extends StatefulWidget {
   const MentorPage({super.key});
@@ -30,11 +31,11 @@ class _MentorPageState extends State<MentorPage> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 30.h,
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 20.w),
               child: Row(
                 children: [
                   isDrawerOpen
@@ -59,8 +60,8 @@ class _MentorPageState extends State<MentorPage> {
                               isDrawerOpen = true;
                             });
                           }),
-                  const SizedBox(
-                    width: 50,
+                  SizedBox(
+                    width: 50.w,
                   ),
                   const Column(
                     children: [
@@ -77,27 +78,27 @@ class _MentorPageState extends State<MentorPage> {
               ),
             ),
             _container(
-                0.0,
-                30.0,
-                10.0,
+                0.0.w,
+                30.0.h,
+                10.0.w,
                 Colors.lightBlue,
                 LocaleData.mentors.getString(context),
                 "assets/images/mentor.png"),
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 50.h,
             ),
             Stack(
               alignment: Alignment.topCenter,
               children: <Widget>[
                 Container(
-                  width: 300,
-                  height: 180,
+                  width: 300.w,
+                  height: 160.h,
                   alignment: Alignment.center,
                   margin: const EdgeInsets.all(50),
                   decoration: BoxDecoration(
                     color: primaryGreen,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20.r),
                     ),
                     border: Border.all(
                       width: 3,
@@ -106,25 +107,27 @@ class _MentorPageState extends State<MentorPage> {
                   ),
                   child: Column(
                     children: <Widget>[
-                      const SizedBox(
-                        height: 50,
+                      SizedBox(
+                        height: 50.h,
                       ),
-                      const Text(
+                      Text(
                         "Nikhil Patil",
                         style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.sp,
+                        ),
                       ),
-                      const SizedBox(
-                        height: 5,
+                      SizedBox(
+                        height: 5.h,
                       ),
-                      const Text(
+                      Text(
                         "Founder",
                         style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.sp,
+                        ),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -144,10 +147,10 @@ class _MentorPageState extends State<MentorPage> {
                   ),
                 ),
                 Container(
-                  width: 100,
-                  height: 100,
+                  width: 85.w,
+                  height: 85.w,
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(50)),
+                    borderRadius: BorderRadius.all(Radius.circular(50.r)),
                     image: const DecorationImage(
                       image: AssetImage("assets/images/nikhil.jpg"),
                       fit: BoxFit.cover,
@@ -164,14 +167,14 @@ class _MentorPageState extends State<MentorPage> {
               alignment: Alignment.topCenter,
               children: <Widget>[
                 Container(
-                  width: 300,
-                  height: 180,
+                  width: 300.w,
+                  height: 160.h,
                   alignment: Alignment.center,
                   margin: const EdgeInsets.all(50),
                   decoration: BoxDecoration(
                     color: primaryGreen,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20.r),
                     ),
                     border: Border.all(
                       width: 3,
@@ -180,25 +183,27 @@ class _MentorPageState extends State<MentorPage> {
                   ),
                   child: Column(
                     children: <Widget>[
-                      const SizedBox(
-                        height: 50,
+                      SizedBox(
+                        height: 50.h,
                       ),
-                      const Text(
+                      Text(
                         "Yash Bandbe",
                         style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.sp,
+                        ),
                       ),
-                      const SizedBox(
-                        height: 5,
+                      SizedBox(
+                        height: 5.h,
                       ),
-                      const Text(
-                        "Extra Founder",
+                      Text(
+                        "Co-Founder",
                         style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.sp,
+                        ),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -218,8 +223,8 @@ class _MentorPageState extends State<MentorPage> {
                   ),
                 ),
                 Container(
-                  width: 100,
-                  height: 100,
+                  width: 85.w,
+                  height: 85.w,
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(50)),
                     image: const DecorationImage(
@@ -238,14 +243,14 @@ class _MentorPageState extends State<MentorPage> {
               alignment: Alignment.topCenter,
               children: <Widget>[
                 Container(
-                  width: 300,
-                  height: 180,
+                  width: 300.w,
+                  height: 160.h,
                   alignment: Alignment.center,
                   margin: const EdgeInsets.all(50),
                   decoration: BoxDecoration(
                     color: primaryGreen,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20.r),
                     ),
                     border: Border.all(
                       width: 3,
@@ -254,25 +259,27 @@ class _MentorPageState extends State<MentorPage> {
                   ),
                   child: Column(
                     children: <Widget>[
-                      const SizedBox(
-                        height: 50,
+                      SizedBox(
+                        height: 50.h,
                       ),
-                      const Text(
+                      Text(
                         "Siddharth ",
                         style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.sp,
+                        ),
                       ),
-                      const SizedBox(
-                        height: 5,
+                      SizedBox(
+                        height: 5.h,
                       ),
-                      const Text(
-                        "Extra Founder",
+                      Text(
+                        "Developer",
                         style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.sp,
+                        ),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -292,8 +299,8 @@ class _MentorPageState extends State<MentorPage> {
                   ),
                 ),
                 Container(
-                  width: 100,
-                  height: 100,
+                  width: 85.w,
+                  height: 85.w,
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(50)),
                     image: const DecorationImage(
@@ -312,14 +319,14 @@ class _MentorPageState extends State<MentorPage> {
               alignment: Alignment.topCenter,
               children: <Widget>[
                 Container(
-                  width: 300,
-                  height: 180,
+                  width: 300.w,
+                  height: 160.h,
                   alignment: Alignment.center,
                   margin: const EdgeInsets.all(50),
                   decoration: BoxDecoration(
                     color: primaryGreen,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20.r),
                     ),
                     border: Border.all(
                       width: 3,
@@ -328,25 +335,27 @@ class _MentorPageState extends State<MentorPage> {
                   ),
                   child: Column(
                     children: <Widget>[
-                      const SizedBox(
-                        height: 50,
+                      SizedBox(
+                        height: 50.h,
                       ),
-                      const Text(
+                      Text(
                         "Abdul Bari",
                         style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.sp,
+                        ),
                       ),
-                      const SizedBox(
-                        height: 5,
+                      SizedBox(
+                        height: 5.h,
                       ),
-                      const Text(
-                        "Extra founder",
+                      Text(
+                        "Tester",
                         style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.sp,
+                        ),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -366,8 +375,8 @@ class _MentorPageState extends State<MentorPage> {
                   ),
                 ),
                 Container(
-                  width: 100,
-                  height: 100,
+                  width: 85.w,
+                  height: 85.w,
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(50)),
                     image: const DecorationImage(
@@ -397,27 +406,28 @@ class _MentorPageState extends State<MentorPage> {
       },
       child: Container(
         margin: EdgeInsets.only(left: left, right: right, top: top),
-        height: 200,
+        height: 180.h,
         width: (MediaQuery.of(context).size.width - 50),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: color),
+            borderRadius: BorderRadius.circular(20.r), color: color),
         child: Column(
           children: <Widget>[
             Container(
-              height: 150,
+              height: 132.h,
               width: (MediaQuery.of(context).size.width - 50),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                   image: DecorationImage(
                       image: AssetImage(image), fit: BoxFit.cover)),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             Text(
               text,
-              style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
+              style: TextStyle(
+                fontSize: 24.sp,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             )
           ],
         ),

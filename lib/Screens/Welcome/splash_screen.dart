@@ -2,6 +2,7 @@ import 'package:educational_app/Screens/Login/LoginScreen.dart';
 import 'package:educational_app/components/step_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -47,8 +48,8 @@ class _SplashScreenState extends State<SplashScreen> {
   _appbar(Size size) {
     return SingleChildScrollView(
       child: Container(
-        margin: const EdgeInsets.only(top: 20),
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+        margin: EdgeInsets.only(top: 20.h),
+        padding: EdgeInsets.symmetric(horizontal: 12.w),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -78,11 +79,11 @@ class _SplashScreenState extends State<SplashScreen> {
                       builder: (context) => const LoginScreen(),
                     ));
               },
-              child: const Text(
+              child: Text(
                 "Skip",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 16,
+                  fontSize: 16.sp,
                   color: Colors.black,
                 ),
               ),
@@ -104,8 +105,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 index == 1
                     ? _displayText(list[index].text!)
                     : _displayImage(list[index].id!),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: 10.h,
                 ),
                 index == 1
                     ? _displayImage(list[index].id!)
@@ -118,15 +119,15 @@ class _SplashScreenState extends State<SplashScreen> {
 
   _indicator() {
     return SizedBox(
-      width: 80,
-      height: 80,
+      width: 80.w,
+      height: 80.h,
       child: Stack(
         children: <Widget>[
           Align(
             alignment: Alignment.center,
             child: SizedBox(
-              width: 80,
-              height: 80,
+              width: 80.w,
+              height: 80.h,
               child: CircularProgressIndicator(
                 valueColor: const AlwaysStoppedAnimation(Colors.lightBlue),
                 value: (initialPage + 1) / (list.length + 1),
@@ -156,8 +157,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       ));
               },
               child: Container(
-                width: 65,
-                height: 65,
+                width: 65.w,
+                height: 65.h,
                 decoration: const BoxDecoration(
                   color: Colors.lightBlue,
                   borderRadius: BorderRadius.all(Radius.circular(100)),
@@ -177,9 +178,9 @@ class _SplashScreenState extends State<SplashScreen> {
   _displayText(String text) {
     return Text(
       text,
-      style: const TextStyle(
+      style: TextStyle(
         fontWeight: FontWeight.bold,
-        fontSize: 20,
+        fontSize: 20.sp,
       ),
       textAlign: TextAlign.center,
     );
