@@ -279,8 +279,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         width: 10.w,
                       ),
                       Text(
-                        // LocaleData.quiz.getString(context),
-                        "Study Center",
+                        LocaleData.Study_Center.getString(context),
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,

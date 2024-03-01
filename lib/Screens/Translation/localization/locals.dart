@@ -31,6 +31,7 @@ mixin LocaleData {
   static const String logout = 'logout';
   static const String contactus = 'contactus';
   static const String feedback = 'feedback';
+  static const String Study_Center = 'Study_Center';
 //  Have an issue  or query? \nFeel free to contact us
 
   static const Map<String, dynamic> EN = {
@@ -56,7 +57,8 @@ mixin LocaleData {
     contact: 'Contact',
     logout: 'LogOut',
     contactus: 'Contact Us',
-    feedback: 'Have an issue  or query? \nFeel free to contact us'
+    feedback: 'Have an issue  or query? \nFeel free to contact us',
+    Study_Center: 'Study Center',
   };
 
   static const Map<String, dynamic> HI = {
@@ -87,7 +89,8 @@ mixin LocaleData {
     'logout': 'लॉग आउट करें', // LogOut
     'contactus': 'हमसे संपर्क करें', // Contact Us
     'feedback':
-        'कोई समस्या या प्रश्न है? \nहमसे संपर्क करने में संकोच न करें' // Have an issue  or query? \nFeel free to contact us
+        'कोई समस्या या प्रश्न है? \nहमसे संपर्क करने में संकोच न करें', // Have an issue  or query? \nFeel free to contact us
+    'Study_Center': 'अध्ययन केंद्र'
   };
 
   static const Map<String, dynamic> UR = {
@@ -119,6 +122,7 @@ mixin LocaleData {
     'logout': 'لاگ آؤٹ کریں', // LogOut
     'contactus': 'ہمارے سے رابطہ کریں', // Contact Us
     'feedback':
-        'کیا کوئی مسئلہ یا سوال ہے؟ \nہمارے سے رابطہ کرنے میں ہچکچائیں نہیں' // Have an issue  or query? \nFeel free to contact us
+        'کیا کوئی مسئلہ یا سوال ہے؟ \nہمارے سے رابطہ کرنے میں ہچکچائیں نہیں', // Have an issue  or query? \nFeel free to contact us
+    'Study_Center': 'اسٹڈی سینٹر'
   };
 }
