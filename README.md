@@ -38,5 +38,6 @@ What makes Step to Learn different is that it is:
 
 Step to Learn is open source, which means you can access, modify, and contribute to the code on GitHub.
 
-![Screenshot_1709287333](https://github.com/NAME-NikhilPatil/Step-to-learn-Educational-App/assets/74563500/630dc11f-5c0e-4ba3-88df-b7f9b2c73b36)
+
+
 
