@@ -103,7 +103,7 @@ class _QuizState extends State<MaterialsPage> {
                         children: snapshot.data!.docs
                             .map((DocumentSnapshot document) {
                           return Container(
-                            margin: EdgeInsets.all(10.0),
+                            margin: const EdgeInsets.all(10.0),
                             decoration: BoxDecoration(
                               color: primaryGreen,
                               borderRadius: BorderRadius.circular(15.r),

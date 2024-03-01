@@ -85,7 +85,7 @@ class _QuizState extends State<Quiz> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Text(
                   des,
                   style: TextStyle(
